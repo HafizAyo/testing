@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width.initial-scale=1.0">
+    <title>I Love You</title>
+    <style>
+      body {
+          background-color: pink;
+          font-family: Arial, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          position: relative;
+          color: #FF1493;
+      }
+
+      .container {
+        text-align: center;
+        font-size: 3em;
+        position: relative;
+        z-index: 1;
+        animation: popIn 1s ease-out forwards;
+        opacity: 0;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      }
+
+      @keyframes popIn {
+          0% { transform: scale(0); opacity: 0,}
+          100% {transform: scale(1); opacity: 1}
+      }
+
+      .rose {
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          background-image: url();
+          background-size: cover;
+          opacity: 0;
+          animation: fadeIn 1s ease-out forwards;
+      }
+
+      @keyframes fadeIn {
+        0% {opacity: 0; transform: scale(0);}
+        100% {opacity: 1; transform: scale(1);}
+      }
+
+      .rose:nth-child(2) {top: 10%; left: 15%; animation-delay: 0.5s;}
+      .rose:nth-child(3) {top: 20%; right: 20%; animation-delay: 1s;}
+      .rose:nth-child(4) {top: 50%; left: 5%; animation-delay: 1.5s;}
+      .rose:nth-child(5) {top: 75%; right: 15%; animation-delay: 2s;}
+      .rose:nth-child(6) {top: 30%; left: 50%; animation-delay: 2.5s;}
+      .rose:nth-child(7) {bottom: 20%; right: 30%; animation-delay: 3s;}
+
+      .heart {
+        font-size: 8em;
+        color: red;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0%;
+        animation: fadeIn 1s ease-out forwards;
+        animation-delay: 3.5s;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">I Love You</div>
+
+    <div class="rose"></div>
+    <div class="rose"></div>
+    <div class="rose"></div>
+    <div class="rose"></div>
+    <div class="rose"></div>
+    <div class="rose"></div>
+
+    <div class="heart">❤️</div>
+</body>
+</html>
